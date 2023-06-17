@@ -18,7 +18,7 @@
     "about": {
       "type": "richtext"
     },
-    "cv_work_positions": {
+    "work_positions": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::cv-work-position.cv-work-position",

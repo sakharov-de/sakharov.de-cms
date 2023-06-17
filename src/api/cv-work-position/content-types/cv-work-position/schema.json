@@ -24,17 +24,17 @@
     "end": {
       "type": "string"
     },
+    "employer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cv-employer.cv-employer",
+      "inversedBy": "work_positions"
+    },
     "profile": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::cv-profile.cv-profile",
-      "inversedBy": "cv_work_positions"
-    },
-    "cv_employer": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::cv-employer.cv-employer",
-      "inversedBy": "cv_work_positions"
+      "inversedBy": "work_positions"
     }
   }
 }
