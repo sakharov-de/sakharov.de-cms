@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cv_work_positions",
+  "info": {
+    "singularName": "cv-work-position",
+    "pluralName": "cv-work-positions",
+    "displayName": "CV Work Position",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "start": {
+      "type": "string"
+    },
+    "end": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cv-profile.cv-profile",
+      "inversedBy": "cv_work_positions"
+    },
+    "cv_employer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cv-employer.cv-employer",
+      "inversedBy": "cv_work_positions"
+    }
+  }
+}

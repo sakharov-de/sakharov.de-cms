@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cv_employers",
+  "info": {
+    "singularName": "cv-employer",
+    "pluralName": "cv-employers",
+    "displayName": "CV Employer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "cv_work_positions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cv-work-position.cv-work-position",
+      "mappedBy": "cv_employer"
+    }
+  }
+}
